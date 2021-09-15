@@ -3,7 +3,11 @@
 import pygame                               # Imports pygame and other libraries
 
 # Define Classes (sprites) here
-
+class FallingObject(pygame.sprite.Sprite):
+    def __init__(self):
+        pygame.sprite.Sprite.__init__(self)
+        self.timecreated = pygame.time.get_ticks()
+        self.image = pygame.Surface([30,30])
 pygame.init()                               # Pygame is initialised (starts running)
 
 screen = pygame.display.set_mode([700,500]) # Set the width and height of the screen [width,height]
